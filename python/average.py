@@ -1,0 +1,16 @@
+print("Welcome to average.py")
+scores = []
+
+for i in range(3):
+    score = int(input("Code w: "))
+    scores += [score]
+
+average = sum (scores) / len (scores)
+
+print(f"Average: {average}")
+
+# scores = [72, 73, 33]
+
+# average = sum(scores) / len(scores)
+
+# print(f"Average: {average}")

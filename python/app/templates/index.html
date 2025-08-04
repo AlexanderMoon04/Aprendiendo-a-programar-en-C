@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <h1>Register</h1>
+
+        <form action = "/register" method ="post">
+            <input autocomplete="off" autofocus placeholder="Name" name ="name">
+                <!-- This is dinamically generated -->
+                {% for sport in sports %}
+                    <input name="sport" type="radio" value="{{ sport }}" > {{ sport }}
+                {% endfor %}
+
+                <!-- <option value ="Basketball">Basketball</option>
+                <option value = "Soccer">Soccer</option>
+                <option value = "Ultimate Frisbee">Ultimate Frisbee</option> -->
+            </select>
+            <button>Register</button>
+        </form>
+{% endblock %}

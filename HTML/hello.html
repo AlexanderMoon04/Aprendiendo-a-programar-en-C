@@ -1,0 +1,26 @@
+<!DOCTYPE html> <!--Document type decalaration, it says to browser "EY wey, aqui viene un html"    -->
+
+<html lang="en"> <!--Indicates human language -->
+    <head> <!--The top of the page -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){ //THIS FUNCTION IS TO LOAD THE SCRIPT WHEN THE CONTENT HAS BEEN READ
+                document.querySelector('form').addEventListener('submit', function (event){
+                    alert('Hello, '+ document.querySelector('#name').value); //in java double or single quotes can be with ' ' or " "
+                    event.preventDefault(); //generates default comportamiento
+                    });
+            });
+
+
+        </script>
+
+        <title> hello </title>
+    </head>
+    <body><!---->
+        <form> <!--return false = the submit never goes to the server-->
+            <input autocomplete="off" autpfocus id="name" name="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
+
+    </body>
+</html> <!--End of page-->
