@@ -1,0 +1,13 @@
+#this specifies a particular workflow
+name: Testing
+on: push   #anytime anyone push, this code is excecuted
+
+jobs:
+  test_project:
+    runs-on: ubuntu-latest #what machine is going to run, in this case virtual machine
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Django unit tests
+      run: |
+        pip3 install --user django
+        python3 manage.py test 
